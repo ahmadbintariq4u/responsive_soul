@@ -1,2 +1,14 @@
-# responsive_soul
-The soul of responsive body for you flutter applications.
+A list of reusable reponsive widgets and utilities general methods for your application.
+
+<!-- ## Features -->
+
+<!-- ## Getting started -->
+
+<!-- ## Usage -->
+
+```dart
+ResponsiveSoul()
+```
+
+<!-- ## Additional information -->
+
