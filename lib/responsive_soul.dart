@@ -4,15 +4,20 @@ import 'package:flutter/material.dart';
 
 /// A responsive widget.
 class ResponsiveSoul extends StatelessWidget {
+  static const Widget defaultW = Center(
+      child: Text('Not Handled Yet',
+          style: TextStyle(
+              color: Colors.red, fontSize: 16, fontWeight: FontWeight.w900)));
+
   final Widget mobile;
   final Widget tablet;
   final Widget desktop;
 
   const ResponsiveSoul({
     Key? key,
-    required this.mobile,
-    required this.tablet,
-    required this.desktop,
+    this.mobile = defaultW,
+    this.tablet = defaultW,
+    this.desktop = defaultW,
   }) : super(key: key);
 
   static bool isMobile(BuildContext context) =>
