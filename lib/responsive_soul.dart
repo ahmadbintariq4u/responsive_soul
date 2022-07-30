@@ -104,10 +104,12 @@ class ResponsiveSoul extends StatelessWidget {
         break;
       }
     }
-    for (var i = startIndex + 1; i < list.length; i++) {
-      if (list[i] is! SizedBox) {
-        result = list[i];
-        break;
+    if (result is! SizedBox) {
+      for (var i = startIndex + 1; i < list.length; i++) {
+        if (list[i] is! SizedBox) {
+          result = list[i];
+          break;
+        }
       }
     }
 
