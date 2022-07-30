@@ -96,12 +96,14 @@ class ResponsiveSoul extends StatelessWidget {
   ///
   /// returns [widget] that is not SizedBox and that is most previous to the defined one.
   Widget extractWidget({required startIndex}) {
-    var result;
+    Widget result = SizedBox();
     final list = map.values.toList();
     for (var i = startIndex; i >= 0; i++) {
       if (list[i] is! SizedBox) {
         result = list[i];
         break;
+      } else {
+        result = list[i];
       }
     }
     return result;
