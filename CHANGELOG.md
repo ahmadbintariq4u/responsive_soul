@@ -1,3 +1,5 @@
+## 0.0.8
+Fix undefined breakpoints.
 ## 0.0.7
 
 Fixing bugs
