@@ -1,7 +1,7 @@
 part of '../flutter_soul.dart';
 
 extension LayoutExtension on Widget {
-  // int
+  /// put padding on all side according to [value].
   Padding paddingAll(double value) {
     return Padding(
       padding: EdgeInsets.all(value),
@@ -51,6 +51,7 @@ extension LayoutExtension on Widget {
     );
   }
 
+  /// put margin on all side according to [value].
   Container marginAll(double value) {
     return Container(
       margin: EdgeInsets.all(value),
@@ -100,6 +101,7 @@ extension LayoutExtension on Widget {
     );
   }
 
+  /// round widget according to [value].
   ClipRRect roundAll(value) {
     return ClipRRect(
       borderRadius: BorderRadius.all(Radius.circular(value)),
@@ -107,7 +109,36 @@ extension LayoutExtension on Widget {
     );
   }
 
-  List<Widget> repeat(int length) {
-    return List.generate(length, (index) => this);
+  ClipRRect roundTopLeft(value) {
+    return ClipRRect(
+      borderRadius: BorderRadius.only(topLeft: Radius.circular(value)),
+      child: this,
+    );
+  }
+
+  ClipRRect roundTopRight(value) {
+    return ClipRRect(
+      borderRadius: BorderRadius.only(topRight: Radius.circular(value)),
+      child: this,
+    );
+  }
+
+  ClipRRect roundBottomLeft(value) {
+    return ClipRRect(
+      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(value)),
+      child: this,
+    );
+  }
+
+  ClipRRect roundBottomRight(value) {
+    return ClipRRect(
+      borderRadius: BorderRadius.only(bottomRight: Radius.circular(value)),
+      child: this,
+    );
+  }
+
+  /// repeat the widget according to [count]
+  List<Widget> repeat(int count) {
+    return List.generate(count, (index) => this);
   }
 }

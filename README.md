@@ -14,4 +14,3 @@ ResponsiveSoul()
 ```
 
 <!-- ## Additional information -->
-
