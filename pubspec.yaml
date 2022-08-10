@@ -1,6 +1,6 @@
-name: responsive_soul
-description: Reponsive Widgets or Utilities for you next project.
-version: 0.0.8
+name: flutter_soul
+description: Flutter soul helps you to write app without worrying to much about responsiveness and theming.
+version: 0.0.9
 homepage: https://github.com/ahmadbintariq4u/responsive_soul.git
 
 environment:

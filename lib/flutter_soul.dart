@@ -1,6 +1,7 @@
-library responsive_soul;
+library flutter_soul;
 
 import 'package:flutter/material.dart';
+part 'extensions/context.dart';
 
 /// A responsive widget.
 class ResponsiveSoul extends StatelessWidget {
@@ -11,7 +12,7 @@ class ResponsiveSoul extends StatelessWidget {
   final Widget xl;
   final Widget xxl;
 
-  late Map<String, Widget> map;
+  late final Map<String, Widget> map;
 
   /// default widget.
   static const defaultW = Center(
@@ -95,6 +96,7 @@ class ResponsiveSoul extends StatelessWidget {
   /// loop start from [startIndex] and search the widget that is not null. (means SizedBox)
   ///
   /// returns [widget] that is not SizedBox and that is most previous to the defined one.
+
   Widget extractWidget({required startIndex}) {
     Widget result = SizedBox();
     final list = map.values.toList();
@@ -116,3 +118,5 @@ class ResponsiveSoul extends StatelessWidget {
     return result;
   }
 }
+
+test() {}

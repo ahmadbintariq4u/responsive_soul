@@ -1,4 +1,4 @@
-A list of reusable responsive widgets and utilities methods for your widgets.
+A list of reusable responsive and themes widgets and utilities methods for your app.
 
 <!-- ## Features -->
 
