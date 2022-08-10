@@ -1,6 +1,7 @@
 library flutter_soul;
 
 import 'package:flutter/material.dart';
+part 'extensions/widget.dart';
 part 'extensions/context.dart';
 
 /// A responsive widget.

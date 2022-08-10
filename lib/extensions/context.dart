@@ -1,5 +1,6 @@
 part of '../flutter_soul.dart';
 
+/// [returns] the responsive status [bool] based on context.
 extension ContextExtension on BuildContext {
   bool isXSM() => ResponsiveSoul.isXSM(this);
   bool isSM() => ResponsiveSoul.isSM(this);
@@ -8,3 +9,6 @@ extension ContextExtension on BuildContext {
   bool isXL() => ResponsiveSoul.isXL(this);
   bool isXXL() => ResponsiveSoul.isXXL(this);
 }
+
+
+// For Padding
