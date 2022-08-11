@@ -13,6 +13,8 @@ class ResponsiveSoul extends StatelessWidget {
   final Widget xl;
   final Widget xxl;
 
+  final bool autoManage;
+
   late final Map<String, Widget> map;
 
   /// default widget.
@@ -21,15 +23,16 @@ class ResponsiveSoul extends StatelessWidget {
           style: TextStyle(
               color: Colors.red, fontSize: 16, fontWeight: FontWeight.w900)));
 
-  ResponsiveSoul(
-      {Key? key,
-      this.xsm = const SizedBox(),
-      this.sm = const SizedBox(),
-      this.md = const SizedBox(),
-      this.lg = const SizedBox(),
-      this.xl = const SizedBox(),
-      this.xxl = const SizedBox()})
-      : super(key: key) {
+  ResponsiveSoul({
+    Key? key,
+    this.xsm = const SizedBox(),
+    this.sm = const SizedBox(),
+    this.md = const SizedBox(),
+    this.lg = const SizedBox(),
+    this.xl = const SizedBox(),
+    this.xxl = const SizedBox(),
+    this.autoManage = true,
+  }) : super(key: key) {
     map = {
       "xsm": xsm,
       "sm": sm,
@@ -65,32 +68,50 @@ class ResponsiveSoul extends StatelessWidget {
   /// returns [widget] based on breakpoints.
   @override
   Widget build(BuildContext context) {
-    if (xsm is! SizedBox && isXSM(context)) {
-      return xsm;
-    } else if (xsm is SizedBox && isXSM(context)) {
-      return extractWidget(startIndex: 0);
-    } else if (sm is! SizedBox && isSM(context)) {
-      return sm;
-    } else if (sm is SizedBox && isSM(context)) {
-      return extractWidget(startIndex: 0);
-    } else if (md is! SizedBox && isMD(context)) {
-      return md;
-    } else if (md is SizedBox && isMD(context)) {
-      return extractWidget(startIndex: 1);
-    } else if (lg is! SizedBox && isLG(context)) {
-      return lg;
-    } else if (lg is SizedBox && isLG(context)) {
-      return extractWidget(startIndex: 2);
-    } else if (xl is! SizedBox && isXL(context)) {
-      return xl;
-    } else if (xl is SizedBox && isXL(context)) {
-      return extractWidget(startIndex: 3);
-    } else if (xxl is! SizedBox && isXXL(context)) {
-      return xxl;
-    } else if (xxl is SizedBox && isXXL(context)) {
-      return extractWidget(startIndex: 4);
+    if (autoManage) {
+      if (xsm is! SizedBox && isXSM(context)) {
+        return xsm;
+      } else if (xsm is SizedBox && isXSM(context)) {
+        return extractWidget(startIndex: 0);
+      } else if (sm is! SizedBox && isSM(context)) {
+        return sm;
+      } else if (sm is SizedBox && isSM(context)) {
+        return extractWidget(startIndex: 0);
+      } else if (md is! SizedBox && isMD(context)) {
+        return md;
+      } else if (md is SizedBox && isMD(context)) {
+        return extractWidget(startIndex: 1);
+      } else if (lg is! SizedBox && isLG(context)) {
+        return lg;
+      } else if (lg is SizedBox && isLG(context)) {
+        return extractWidget(startIndex: 2);
+      } else if (xl is! SizedBox && isXL(context)) {
+        return xl;
+      } else if (xl is SizedBox && isXL(context)) {
+        return extractWidget(startIndex: 3);
+      } else if (xxl is! SizedBox && isXXL(context)) {
+        return xxl;
+      } else if (xxl is SizedBox && isXXL(context)) {
+        return extractWidget(startIndex: 4);
+      } else {
+        return defaultW;
+      }
     } else {
-      return defaultW;
+      if (xsm is! SizedBox && isXSM(context)) {
+        return xsm;
+      } else if (sm is! SizedBox && isSM(context)) {
+        return sm;
+      } else if (md is! SizedBox && isMD(context)) {
+        return md;
+      } else if (lg is! SizedBox && isLG(context)) {
+        return lg;
+      } else if (xl is! SizedBox && isXL(context)) {
+        return xl;
+      } else if (xxl is! SizedBox && isXXL(context)) {
+        return xxl;
+      } else {
+        return const SizedBox();
+      }
     }
   }
 
