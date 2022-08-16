@@ -13,7 +13,7 @@ class StackNode<T> {
 }
 
 /// A simple LIFO container.
-class Stack<T> {
+class StackSoul<T> {
   /// Reference to the top of the stack
   StackNode<T>? _top;
 
@@ -21,7 +21,7 @@ class Stack<T> {
   int size;
 
   /// Construct a new Stack
-  Stack()
+  StackSoul()
       : _top = null,
         size = 0;
 
