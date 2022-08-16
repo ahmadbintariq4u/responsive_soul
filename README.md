@@ -4,8 +4,9 @@ A list of reusable responsive, themes widgets, extensions and utilities methods 
 
 ## Features
 
-* ⚡ Great performance
+* ⚡ Great performance.
 * 🦾 6 breakpoints for your widget.
+* 😍 Data structure algorithms.
 * ❤️ Context extensions for checking the required breakpoint.
 * ❤️ Widget extensions for padding, margin and radius properties.
 <!-- ## Getting started -->
@@ -35,5 +36,22 @@ ResponsiveSoul(
 )
 ```
 
-by setting `autoManage:false` your widget only show on respected breakpoint.
-<!-- ## Additional information -->
+by setting `autoManage:false` your widget only show on respected breakpoint only (Rest of the breakpoints show no widget).
+
+You can check the respected breakpoint in two ways;
+
+1. By using static member
+
+    ```dart
+    ResponsiveSoul.isSM(context) // return bool
+    ```
+
+2. By context extension
+
+    ```dart
+     context.isSM() // return bool
+    ```
+
+## Additional information
+
+For complete documentation, head over 
