@@ -1,8 +1,13 @@
 library flutter_soul;
 
 import 'package:flutter/material.dart';
+
+import 'data_structure/heaps/base.dart';
+
+import 'data_structure/heaps/base.dart';
 part 'extensions/widget.dart';
 part 'extensions/context.dart';
+part 'data_structure/lists/stack.dart';
 
 /// A responsive widget.
 class ResponsiveSoul extends StatelessWidget {

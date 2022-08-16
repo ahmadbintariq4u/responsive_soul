@@ -1,4 +1,4 @@
-import '../heaps/base.dart';
+part of '../../flutter_soul.dart';
 
 /// Node representing for a stack node
 class StackNode<T> {
