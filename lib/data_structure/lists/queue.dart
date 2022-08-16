@@ -14,7 +14,7 @@ class QueueNode<T> {
 }
 
 /// A simple linked list based FIFO.
-class Queue<T> {
+class QueueSoul<T> {
   /// The first inserted member of the queue
   QueueNode<T>? _head;
 
@@ -24,8 +24,8 @@ class Queue<T> {
   /// The size of the queue
   int length;
 
-  /// Create an empty [Queue]
-  Queue() : length = 0;
+  /// Create an empty [QueueSoul]
+  QueueSoul() : length = 0;
 
   /// Show the first element and dequeue candidate
   T? get head => _head?.data;
