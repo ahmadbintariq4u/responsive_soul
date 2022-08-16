@@ -1,29 +1,29 @@
-import '../heaps/base.dart';
+part of flutter_soul;
 
 /// The DoublyLinkedList Node.
 ///
 /// It has both previous and next references.
-class Node<T> {
+class DoubleLinkedListNode<T> {
   /// The data [this] contains
   T data;
 
-  /// Reference to previous [Node]
-  Node<T>? previous;
+  /// Reference to previous [DoubleLinkedListNode]
+  DoubleLinkedListNode<T>? previous;
 
-  /// Reference to next [Node]
-  Node<T>? next;
+  /// Reference to next [DoubleLinkedListNode]
+  DoubleLinkedListNode<T>? next;
 
-  /// Initialize [Node] with data.
-  Node(this.data);
+  /// Initialize [DoubleLinkedListNode] with data.
+  DoubleLinkedListNode(this.data);
 }
 
 /// DoubleLinkedList ADT
 class DoublyLinkedListSoul<T> {
   /// First node of the list
-  Node<T>? head;
+  DoubleLinkedListNode<T>? head;
 
   /// Last node of the list
-  Node<T>? tail;
+  DoubleLinkedListNode<T>? tail;
 
   /// Size of the list
   int length;
@@ -57,7 +57,7 @@ class DoublyLinkedListSoul<T> {
   /// Show the [n]th element of the list.
   ///
   /// The list remains unmodified. `null` when index is out of bounds
-  Node<T> at(int n) {
+  DoubleLinkedListNode<T> at(int n) {
     if (n >= length || n < 0) throw InvalidIndexError();
 
     var current = head;
@@ -70,7 +70,7 @@ class DoublyLinkedListSoul<T> {
 
   /// Add something to the beginning of [this]
   void prepend(T data) {
-    var newNode = Node(data);
+    var newNode = DoubleLinkedListNode(data);
 
     if (isEmpty) {
       _setOnlyNode(newNode);
@@ -85,7 +85,7 @@ class DoublyLinkedListSoul<T> {
 
   /// Add something at the end of [this]
   void append(T data) {
-    var newNode = Node(data);
+    var newNode = DoubleLinkedListNode(data);
 
     if (isEmpty) {
       _setOnlyNode(newNode);
@@ -100,7 +100,7 @@ class DoublyLinkedListSoul<T> {
 
   /// Insert [data] at [n] index
   void insert(T data, int n) {
-    var newNode = Node(data);
+    var newNode = DoubleLinkedListNode(data);
 
     var nextNode = at(n);
 
@@ -117,7 +117,7 @@ class DoublyLinkedListSoul<T> {
   }
 
   /// Remove the last element
-  Node<T> pop() {
+  DoubleLinkedListNode<T> pop() {
     if (isEmpty) throw InvalidIndexError();
 
     var removeMe = tail!;
@@ -134,7 +134,7 @@ class DoublyLinkedListSoul<T> {
   }
 
   /// Remove the first element
-  Node<T> shift() {
+  DoubleLinkedListNode<T> shift() {
     if (isEmpty) throw InvalidIndexError();
 
     var removeMe = head!;
@@ -151,7 +151,7 @@ class DoublyLinkedListSoul<T> {
   }
 
   /// Remove from [n] index
-  Node<T> remove(int n) {
+  DoubleLinkedListNode<T> remove(int n) {
     var removeMe = at(n);
 
     if (removeMe == head) {
@@ -174,7 +174,7 @@ class DoublyLinkedListSoul<T> {
   }
 
   /// Set [node] as the only node for [this]
-  void _setOnlyNode(Node<T> node) {
+  void _setOnlyNode(DoubleLinkedListNode<T> node) {
     head = node;
     tail = node;
   }

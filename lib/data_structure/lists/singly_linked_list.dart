@@ -1,21 +1,21 @@
-import '../heaps/base.dart';
+part of flutter_soul;
 
 /// A Node containing reference to the next node.
-class Node<T> {
+class SinglyLinkedListNode<T> {
   /// Information for [this]
   T data;
 
   /// Reference to the [next] Node
-  Node<T>? next;
+  SinglyLinkedListNode<T>? next;
 
-  /// We initiate a [Node] either with just the data or with the [next]
+  /// We initiate a [SinglyLinkedListNode] either with just the data or with the [next]
   ///
   /// ```dart
   /// var node = Node(data: 10) // Next is null
   ///
   /// var list = Node(data: 10, next: Node(data: 20, next: Node(data: 30)))
   /// ```
-  Node(this.data, {this.next});
+  SinglyLinkedListNode(this.data, {this.next});
 }
 
 /// A singly linked list. Contains a Node marked as head.
@@ -28,7 +28,7 @@ class Node<T> {
 /// Read more about this at [Wiki](https://en.wikipedia.org/wiki/Linked_list)
 class SinglyLinkedListSoul<T> {
   /// The head of the list
-  Node<T>? _head;
+  SinglyLinkedListNode<T>? _head;
 
   /// Initiates an empty [SinglyLinkedListSoul]
   SinglyLinkedListSoul() : _head = null;
@@ -97,7 +97,7 @@ class SinglyLinkedListSoul<T> {
 
   /// Inserts [data] at the end of the list.
   void append(T data) {
-    var newNode = Node(data);
+    var newNode = SinglyLinkedListNode(data);
 
     if (isEmpty) {
       _head = newNode;
@@ -116,10 +116,10 @@ class SinglyLinkedListSoul<T> {
     if (length < position || position < 0) {
       throw Exception('Invalid position');
     }
-    var newNode = Node(data);
+    var newNode = SinglyLinkedListNode(data);
     var index = 0;
     var currentNode = _head;
-    Node<T>? previousNode;
+    SinglyLinkedListNode<T>? previousNode;
 
     while (index != position) {
       previousNode = currentNode;
@@ -140,7 +140,7 @@ class SinglyLinkedListSoul<T> {
   T pop() {
     if (isEmpty) throw InvalidIndexError();
 
-    Node<T>? previousNode;
+    SinglyLinkedListNode<T>? previousNode;
     var currentNode = _head;
 
     while (currentNode != null) {
@@ -164,7 +164,7 @@ class SinglyLinkedListSoul<T> {
   T remove(int position) {
     var index = 0;
     var currentNode = _head;
-    Node<T>? previousNode;
+    SinglyLinkedListNode<T>? previousNode;
 
     if (isEmpty || length < position || position < 0) {
       throw Exception('Invalid position');

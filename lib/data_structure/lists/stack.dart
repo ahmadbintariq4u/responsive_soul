@@ -1,4 +1,4 @@
-part of '../../flutter_soul.dart';
+part of flutter_soul;
 
 /// Node representing for a stack node
 class StackNode<T> {

@@ -1,3 +1,5 @@
+part of flutter_soul;
+
 /// QueueNode that contains ahead and behind references.
 class QueueNode<T> {
   /// Data of the node

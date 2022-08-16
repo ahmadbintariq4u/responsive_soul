@@ -8,6 +8,9 @@ part 'extensions/widget.dart';
 part 'extensions/context.dart';
 part 'widgets/widgets.dart';
 part 'data_structure/lists/stack.dart';
+part 'data_structure/lists/queue.dart';
+part 'data_structure/lists/singly_linked_list.dart';
+part 'data_structure/lists/doubly_linked_list.dart';
 
 /// A responsive widget.
 class ResponsiveSoul extends StatelessWidget {
