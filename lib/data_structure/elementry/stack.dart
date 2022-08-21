@@ -1,9 +1,9 @@
 part of flutter_soul;
 
-class Stack<E> {
-  Stack() : _storage = <E>[];
+class StackSoul<E> {
+  StackSoul() : _storage = <E>[];
 
-  Stack.of(Iterable<E> elements) : _storage = List<E>.of(elements);
+  StackSoul.of(Iterable<E> elements) : _storage = List<E>.of(elements);
 
   final List<E> _storage;
 
