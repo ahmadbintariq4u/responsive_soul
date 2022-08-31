@@ -6,6 +6,7 @@ part 'extensions/widget.dart';
 part 'extensions/context.dart';
 part 'widgets/widgets.dart';
 part 'data_structure/elementry/stack.dart';
+part 'data_structure/elementry/linked_list.dart';
 
 /// A responsive widget.
 class ResponsiveSoul extends StatelessWidget {
@@ -123,7 +124,7 @@ class ResponsiveSoul extends StatelessWidget {
   /// returns [widget] that is not SizedBox and that is most previous to the defined one.
 
   Widget extractWidget({required startIndex}) {
-    Widget result = SizedBox();
+    Widget result = const SizedBox();
     final list = map.values.toList();
     for (var i = startIndex; i >= 0; i--) {
       if (list[i] is! SizedBox) {
