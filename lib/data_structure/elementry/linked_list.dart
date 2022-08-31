@@ -12,7 +12,7 @@ class Node<T> {
   }
 }
 
-class LinkedList<E> extends Iterable<E> {
+class LinkedListSoul<E> extends Iterable<E> {
   Node<E>? head;
   Node<E>? tail;
 
@@ -95,8 +95,8 @@ class LinkedList<E> extends Iterable<E> {
 }
 
 class _LinkedListIterator<E> implements Iterator<E> {
-  _LinkedListIterator(LinkedList<E> list) : _list = list;
-  final LinkedList<E> _list;
+  _LinkedListIterator(LinkedListSoul<E> list) : _list = list;
+  final LinkedListSoul<E> _list;
 
   Node<E>? _currentNode;
 
