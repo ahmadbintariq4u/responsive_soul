@@ -1,16 +1,23 @@
 name: flutter_soul
 description: Flutter soul helps you to write app without worrying to much about responsiveness and theming.
-version: 0.0.9
-homepage: https://github.com/ahmadbintariq4u/responsive_soul.git
+version: 1.0.0
+homepage: https://github.com/ahmadbintariq4u/flutter_soul.git
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: ">=2.17.6 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   device_information: ^0.0.4
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
+  intl: ^0.18.1
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
+  logger: ^1.4.0
+  logging: ^1.2.0
+  path_provider: ^2.0.15
 
 dev_dependencies:
   flutter_test:

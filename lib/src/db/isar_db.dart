@@ -1,0 +1,1 @@
+insertLogEntry({required String log}) {}
